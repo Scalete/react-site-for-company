@@ -3,6 +3,9 @@
 @import "./mixin";
 @import "./button";
 
+@import "./components/header/index";
+@import "./components/footer/index";
+
 *,
 :before,
 :after {
@@ -26,6 +29,11 @@ body {
   font-weight: 400;
   color: $black;
   background-color: $white;
+  padding: 0 res(0, 25);
+
+  &.disable-scroll {
+    overflow: hidden;
+  }
 }
 
 button,
@@ -134,10 +142,4 @@ button {
 
 ::-moz-focus-inner {
   border: 0;
-}
-
-/* Disable scroll */
-
-.disable-scroll {
-  overflow: hidden;
 }
